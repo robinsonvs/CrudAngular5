@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routerConfig';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
