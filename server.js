@@ -1,4 +1,3 @@
-import { request } from 'https';
 
 const express = require('express'),
         path = require('path'),
