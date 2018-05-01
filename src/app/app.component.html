@@ -1,15 +1,20 @@
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <a routerLink="create" routerLinkActive="active">
-            Add Products
-          </a>
-        </li>    
-      </ul>
-    </div>
-  </nav>
-  
-  <div class="container">
-    <router-outlet></router-outlet>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li>
+        <a routerLink="create">
+          Add products
+        </a>
+      </li>
+      <li>
+        <a routerLink="index">
+          Display products
+        </a>
+      </li>
+    </ul>
   </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
