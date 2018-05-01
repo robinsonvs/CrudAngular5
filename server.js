@@ -16,7 +16,7 @@ const express = require('express'),
         const app = express()
         app.use(bodyParser.json())
         app.use(cors())
-        var port = process.env.PORT || 400
+        var port = process.env.PORT || 4000
         
         app.use('/products', productRoutes)
 

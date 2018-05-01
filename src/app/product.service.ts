@@ -20,8 +20,8 @@ export class ProductService {
     this.http.post(uri, obj).subscribe(res => console.log('Done'));
   }
 
-  getProducts(id){
-    const uri = 'http://localhost:4000/products/edit' + id;
+  getProducts(){
+    const uri = 'http://localhost:4000/products';
     return this.http.get(uri).map(res => {
       return res;
     });
