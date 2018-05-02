@@ -33,12 +33,6 @@ export class EditComponent implements OnInit {
     });
   }
 
-  deleteProduct(id){
-    this.service.deleteProduct(id).subscribe(res => {
-      console.log('Deleted');
-    });
-  }
-
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.product = this.service.editProduct(params['id']).subscribe(res => {

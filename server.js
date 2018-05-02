@@ -16,11 +16,11 @@ const express = require('express'),
         const app = express()
         app.use(bodyParser.json())
         app.use(cors())
-        var port = process.env.PORT || 4000
+        const port = process.env.PORT || 4000
         
         app.use('/products', productRoutes)
 
-        var server = app.listen(function(){
+        var server = app.listen(port, function(){
             console.log('Listening on port ' + port);
         })
 

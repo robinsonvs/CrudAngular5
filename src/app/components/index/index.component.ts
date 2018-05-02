@@ -23,4 +23,10 @@ export class IndexComponent implements OnInit {
       this.products = res;
     });
   }
+
+  deleteProduct(id){
+    this.service.deleteProduct(id).subscribe(res => {
+      console.log('Deleted');
+    });
+  }  
 }

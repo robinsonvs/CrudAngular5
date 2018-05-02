@@ -1,10 +1,9 @@
 
-const express = require('express')
-const app = express()
-const productRoutes = express.Router()
+var express = require('express')
+var productRoutes = express.Router()
 
 //require Item model in our routes module
-const Product = require('../models/Product')
+var Product = require('../models/Product')
 
 //define store routen
 productRoutes.route('/add').post(function(req, res){
@@ -20,8 +19,7 @@ productRoutes.route('/add').post(function(req, res){
 
 //define get data (index or listing) route
 productRoutes.route('/').get(function(req, res){
-    const id = req.params.id
-    Product.findById(id, function(err, product){
+    Product.find(function(err, product){
         res.json(product)
     })
 })
@@ -55,7 +53,7 @@ productRoutes.route('/update/:id').post(function(req, res){
 
 //define delete | remove | destroy route
 productRoutes.route('/delete/:id').get(function(req, res){
-    Product.findByIdAndRemove({id : req.params.id}, function(err, product){
+    Product.findByIdAndRemove({_id : req.params.id}, function(err, product){
         if (err)
             res.json(err)
         else 
